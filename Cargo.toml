@@ -1,0 +1,21 @@
+[package]
+name = "box-run"
+version = "0.1.0"
+edition = "2024"
+description = "Linux-first CLI for running one command inside a lightweight sandbox"
+license = "MIT"
+repository = "https://github.com/igtm/box-run"
+
+[dependencies]
+clap = { version = "4.5.40", features = ["derive"] }
+libc = "0.2.177"
+serde = { version = "1.0.228", features = ["derive"] }
+tempfile = "3.23.0"
+thiserror = "2.0.17"
+toml = "0.9.8"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.20", features = ["fmt"] }
+which = "8.0.0"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+landlock = "0.4.4"
