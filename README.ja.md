@@ -18,10 +18,43 @@ English README: [README.md](README.md)
 - Landlock ABI 4+ 環境での TCP bind/connect allowlist
 - backend 状態を確認する `doctor`
 
-## ビルド
+## インストール
+
+実行時の前提:
+
+- Linux 環境で `bubblewrap` (`bwrap`) が `PATH` 上にあること
+
+代表的な package install 例:
+
+```bash
+# Ubuntu / Debian
+sudo apt-get install bubblewrap
+
+# Fedora
+sudo dnf install bubblewrap
+
+# Arch Linux
+sudo pacman -S bubblewrap
+```
+
+GitHub から install:
+
+```bash
+cargo install --git https://github.com/igtm/box-run box-run
+```
+
+local checkout から install:
 
 ```bash
 cargo build
+# or
+cargo install --path .
+```
+
+install 後は backend 状態を確認できます:
+
+```bash
+box-run doctor
 ```
 
 ## 例

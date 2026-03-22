@@ -18,10 +18,43 @@ Current MVP features:
 - optional TCP bind/connect allowlists backed by Landlock on kernels with ABI 4+
 - `doctor` command for backend inspection
 
-## Build
+## Install
+
+Runtime requirement:
+
+- Linux with `bubblewrap` (`bwrap`) available on `PATH`
+
+Common package examples:
+
+```bash
+# Ubuntu / Debian
+sudo apt-get install bubblewrap
+
+# Fedora
+sudo dnf install bubblewrap
+
+# Arch Linux
+sudo pacman -S bubblewrap
+```
+
+Install from Git:
+
+```bash
+cargo install --git https://github.com/igtm/box-run box-run
+```
+
+Install from a local checkout:
 
 ```bash
 cargo build
+# or
+cargo install --path .
+```
+
+After installation, verify the backend:
+
+```bash
+box-run doctor
 ```
 
 ## Examples
