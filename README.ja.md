@@ -24,19 +24,6 @@ English README: [README.md](README.md)
 
 - Linux 環境で `bubblewrap` (`bwrap`) が `PATH` 上にあること
 
-代表的な package install 例:
-
-```bash
-# Ubuntu / Debian
-sudo apt-get install bubblewrap
-
-# Fedora
-sudo dnf install bubblewrap
-
-# Arch Linux
-sudo pacman -S bubblewrap
-```
-
 GitHub から install:
 
 ```bash
@@ -46,8 +33,6 @@ cargo install --git https://github.com/igtm/box-run box-run
 local checkout から install:
 
 ```bash
-cargo build
-# or
 cargo install --path .
 ```
 
